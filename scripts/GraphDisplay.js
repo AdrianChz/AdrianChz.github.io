@@ -3,7 +3,7 @@
 
 var footballData;
 //open the football data file to use for the table that we are generating.
-d3.csv("../data/FootballDataDumps.csv", function(footballData) {
+d3.csv("../data/FootballDataDumps-orig.csv", function(footballData) {
 	//put the output in a variable called footballData
 	this.footballData = footballData;
 
