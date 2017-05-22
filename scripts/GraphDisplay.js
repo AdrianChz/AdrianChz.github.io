@@ -63,6 +63,7 @@ function createChart() {
 			//loop through the rows of the csv
 			for (var j = 1; j <= 15; j++) {
 				//get the values for go for it, field goal, and punt
+				j = parseInt(j, 10);
 				var goForIt = row["4th & " + j + ": GFI"]; 
 				var fieldGoal = row["4th & " + j + ": FG"];
 				var punt = row["4th & " + j + ": P"];
