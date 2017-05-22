@@ -3,7 +3,7 @@
 
 var footballData;
 //open the football data file to use for the table that we are generating.
-d3.csv("../data/FootballDataDumps-orig.csv", function(footballData) {
+d3.csv("../data/FootballDataDumps.csv", function(footballData) {
 	//put the output in a variable called footballData
 	this.footballData = footballData;
 
@@ -63,10 +63,10 @@ function createChart() {
 			//loop through the rows of the csv
 			for (var j = 1; j <= 15; j++) {
 				//get the values for go for it, field goal, and punt
-				var k = parseInt(j, 10);
-				var goForIt = row["4th & " + k + ": GFI"]; 
-				var fieldGoal = row["4th & " + k + ": FG"];
-				var punt = row["4th & " + k + ": P"];
+				//var k = parseInt(j, 10);
+				var goForIt = row["4th & " + j + ": GFI"]; 
+				var fieldGoal = row["4th & " + j + ": FG"];
+				var punt = row["4th & " + j + ": P"];
 					// print this out
 				//find the biggest value of the three
 				var max = Math.max(goForIt, fieldGoal, punt);
